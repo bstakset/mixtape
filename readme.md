@@ -19,9 +19,9 @@ Change action tag|one or more change action items delimited by additional pipes.
 
 Possible change actions
 
-* ADD_PLAYLIST|<playlist Id>|<User Id>|<common seperated list of song Ids>
-* DEL_PLAYLIST|<playlist Id>
-* ADD_SONG|<playlist Id>|<song Id>
+* ADD_PLAYLIST|playlist Id|user Id|common seperated list of song Ids
+* DEL_PLAYLIST|playlist Id
+* ADD_SONG|playlist Id|song Id
 
 
 ### Assumptions
@@ -45,7 +45,7 @@ The script does not do error handling nor does it verify the validity of the cha
 * the script will read in the mixtape.json and changes.txt file from the input directory and create an updated mixtape file called output.json in the output directory.
 
 
-# HOW TO SCALE TO HANDLE LARGE MIXTAPE.JSON OR CHANGES.TXT FILES
+## HOW TO SCALE TO HANDLE LARGE MIXTAPE.JSON OR CHANGES.TXT FILES
 
 The script was written to read fairly large mixtape.json data files into memory. The script will read the file and store the data into three different hashmaps for constant time lookup performance when processing the changes.txt file.  To limit the memory footprint, the change.txt was designed so it can be read line by line and make changes to the hashmaps in memory. Hence, it can already handle extremly large change files.  Last, the script just outputs the data from the hasmaps to an output file. 
 
