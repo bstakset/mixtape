@@ -37,7 +37,7 @@ The script does not do error handling nor does it verify the validity of the cha
 
 ## HOW IT WORKS
 
-* download node.js for your environment. Downloads can be found at https://nodejs.org/en/download/\
+* download node.js for your environment. Downloads can be found at https://nodejs.org/en/download/
 * download the repo
 * update the mixtape.json file and/or changes.txt file. samples are provided in the input folder
 * open a cmd window and navigate the prompt to the base of the downloaded repo.
